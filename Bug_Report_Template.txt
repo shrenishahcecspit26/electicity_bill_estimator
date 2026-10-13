@@ -1,0 +1,35 @@
+ITUS102 - PRACTICAL EXAMINATION | DEBUGGING AND IMPLEMENTATION REPORT
+Date: 13-10-2026 | Task 01 - Electricity Consumption Bill Estimator
+
+Enrollment No.: 26CE098
+Name: Shreni Shah
+
+SIMPLE BUGS
+Bug | Original problem | Correction made | Why required
+S1 | Navigation target was misspelled as #calcuator | Changed target to #calculator | It matches the calculator section ID and scrolls correctly.
+S2 | Site information used a generic div | Replaced it with the semantic footer element | Footer identifies the page's closing/site-information content.
+S3 | Missing colon after background-color | Corrected to background-color: #f1f6f9; | Valid CSS syntax is required for the background color to apply.
+S4 | Selector used .pageTitle instead of the HTML ID | Changed selector to #pageTitle | # selects the element with id="pageTitle".
+S5 | Entered units were increased by 1 | Removed + 1 from the units value | Calculations now use the exact entered units.
+S6 | Fixed charge was set to ₹500 | Changed fixed charge to ₹50 | It matches the stated calculation policy.
+
+CODE COMPLETION / IMPLEMENTATION
+M1: Added UTF-8 charset and responsive viewport metadata.
+M2: Added an aside.notice with the Important Note heading and input-checking reminder.
+M3: Used Flexbox and justify-content: space-between for navigation.
+M4: Used CSS Grid with two equal-width columns for the cards.
+M5: Added a max-width: 600px media query to stack cards and navigation vertically.
+M6: Implemented surcharge as amount × percentage / 100.
+D1: Implemented chooseRate() with rates ₹5 up to 100 units, ₹7 up to 300 units, and ₹9 above 300 units.
+D2: Implemented calculateBase() as units × rate.
+D3: Used a for loop to display base-bill examples for 100, 200, 300, 400, and 500 units.
+
+FUNCTIONAL TEST
+Test input: 250 units; Domestic
+Observed result: Rate ₹7/unit; Base ₹1,750; Surcharge ₹0; Fixed ₹50; Total ₹1,800.
+Examples displayed: 100 units = ₹500; 200 units = ₹1,400; 300 units = ₹2,100; 400 units = ₹3,600; 500 units = ₹4,500 (base bills before fixed charge).
+Mobile layout checked (Yes/No): Code includes the required responsive rules; please open the page in a browser and verify at 600px and below.
+
+GIT VERSION CONTROL
+git log -1 --oneline output: c57f546 Complete electricity bill estimator practical
+GitHub URL (if available): Not pushed to GitHub.
